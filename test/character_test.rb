@@ -11,4 +11,10 @@ class CharacterTest < MiniTest::Test
   def test_it_should_exist
     assert_instance_of Character, character
   end
+
+  def test_it_should_have_default_values
+    assert_equal "KITT", character.name
+    assert_equal "William Daniels", character.actor
+    assert_equal 1_000_000, character.salary
+  end
 end
