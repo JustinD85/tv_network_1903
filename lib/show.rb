@@ -17,4 +17,8 @@ class Show
     @characters.max_by { |char| char.salary }
   end
 
+  def all_characters_with_salary
+    @characters.map { |char|  {char.name => char.salary}}
+  end
+
 end
