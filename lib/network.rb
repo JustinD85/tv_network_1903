@@ -18,10 +18,11 @@ class Network
   end
 
   def payroll
-    @shows.reduce({}) do |acc, show|
-      
-      
+    all_chars = @shows.reduce({}) do |acc, show|
+      show.all_characters_with_salary.each { |char| acc[char.first] = char.last}
+      acc
     end
-
+    all_chars
   end
+
 end

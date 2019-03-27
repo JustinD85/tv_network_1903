@@ -28,7 +28,7 @@ class ShowTest < MiniTest::Test
   end
 
   def test_it_should_return_all_actors_on_payroll
-    assert_equal [{"Michael Knight" => 1600000},{"KITT"=> 1000000}], knight_rider.all_characters_with_salary
+    assert_equal [["Michael Knight", 1600000],["KITT", 1000000]], knight_rider.all_characters_with_salary
   end
 
 end

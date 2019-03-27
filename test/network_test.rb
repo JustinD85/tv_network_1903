@@ -5,7 +5,7 @@ require './lib/show'
 require './lib/network'
 
 class NetworkTest < MiniTest::Test
-  attr_reader :network, :nbc, :knight_rider, :parks_and_rec
+  attr_reader :network, :nbc, :knight_rider, :parks_and_rec,
               :michael_knight, :kitt, :leslie_knope, :ron_swanson
 
   def setup
@@ -43,6 +43,7 @@ class NetworkTest < MiniTest::Test
   end
 
   def test_it_should_return_all_actors_on_payroll
-    assert_equal 
+    expected = {"Michael Knight"=>1600000, "KITT"=>1000000, "Leslie Knope"=>2000000, "Ron Swanson"=>1400000} 
+    assert_equal expected, nbc.payroll
   end
 end

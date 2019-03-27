@@ -18,7 +18,7 @@ class Show
   end
 
   def all_characters_with_salary
-    @characters.map { |char|  {char.name => char.salary}}
+    @characters.map { |char|  [char.name, char.salary]}
   end
 
 end
