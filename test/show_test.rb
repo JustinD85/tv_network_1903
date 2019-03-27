@@ -22,4 +22,8 @@ class ShowTest < MiniTest::Test
     assert_equal [michael_knight, kitt], knight_rider.characters
     assert_equal 2600000, knight_rider.total_salary
   end
+  
+  def test_it_should_return_highest_paid_character
+    assert_equal michael_knight, knight_rider.highest_paid_character
+  end
 end
